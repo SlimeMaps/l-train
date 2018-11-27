@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html>
+		
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Slime Maps</title>
+		<link href="css/slime-maps.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400italic,900,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		
+		<style type="text/css">
+		.jsclass body .randomcontent{ /*Do NOT remove! CSS to hide random contents in JS enabled browsers*/
+		display: none;
+		}
+		</style>
+
+		<script type="text/javascript">
+
+		/***********************************************
+		* Random Content (from DIVs) script- by JavaScript Kit (www.javascriptkit.com)
+		* This notice must stay intact for usage
+		* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+		***********************************************/
+
+		if (document.getElementById)
+		document.documentElement.className = 'jsclass'; //hide content for DOM capable browsers
+
+
+		var randomcontentdisplay={
+			divholders:new Object(),
+			masterclass: "randomcontent",
+
+			init:function(){
+				if (!document.getElementById)
+					return
+				var alldivs=document.getElementsByTagName("div")
+				var randomcontentsearch=new RegExp(this.masterclass+"\\s+(group\\d+)", "i") //check for CSS class="randomcontent groupX" (x=integer)
+				for (var i=0; i<alldivs.length; i++){
+					if (randomcontentsearch.test(alldivs[i].className)){
+						if (typeof this.divholders[RegExp.$1]=="undefined") //if array to hold this group of divs doesn't exist yet
+							this.divholders[RegExp.$1]=new Array() //create array first
+							this.divholders[RegExp.$1].push(alldivs[i]) //add this div to the array
+					}
+				}
+			this.showone()
+			},
+
+			showone:function(){
+				for (group in this.divholders){ //loop thru each array within object
+					var chosenOne=Math.floor(Math.random()*this.divholders[group].length) //randomly pick one entry from array
+					this.divholders[group][chosenOne].style.display="block" //display content corresponding to the chosen entry
+				}
+			}
+		}
+
+		</script>
+
+		</head>	
+
+		<body>
+			
+			<h1>Hey Slime Mold, how should I get around the L closure today?</h1>
+
+			<div class="randomcontent group1">
+
+			<img src="img/dish-1.gif">
+
+			<p style="border:1px dashed gray; background-color:lightyellow; padding: 10px">I'm feeling fast today! Take an Uber via Queens Midtown Tunnel Road</p>
+
+			<p>Did you know that Slime Mold is race-car fast? <a href="">Learn more!</a></p>
+
+			</div>
+
+			<div class="randomcontent group1">
+
+			<img src="img/dish-2.gif">
+
+			<p style="border:1px dashed gray; background-color:lightyellow; padding: 10px">I'm lazy. Fuck it. Go to that vegan bananabutter coffeeshop you like so much.</p>
+
+			<p>Did you know that Slime Mold is smarter than a computer?<a href="">Learn more!</a></p>
+
+			</div>
+			
+			<div class="randomcontent group1">
+
+			<img src="img/dish-3.gif">
+
+			<p style="border:1px dashed gray; background-color:lightyellow; padding: 10px">Huff it to the J and rock on. Download a podcast. Enjoy the view from the bridge.</p>
+
+			<p>Did you know that Slime Mold has taught us how to love eachother a little more?<a href="">Learn more!</a></p>
+
+			</div>
+
+
+			<script type="text/javascript">
+			//Call this following all random contents HTML on the page:
+			randomcontentdisplay.init()
+
+			</script>
+		</body>
