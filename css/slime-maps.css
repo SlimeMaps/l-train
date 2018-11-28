@@ -1,0 +1,51 @@
+/*Universal Styles*/
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*Global Styles*/
+		
+		body{
+			background: rgba(30,30,30,1);
+		}
+		h1{
+			color: rgba(255,255,255,1);
+			font-family: sans-serif;
+			text-align: center;
+			padding-top: 30px;
+			padding-bottom: 40px;
+		}
+		.jsclass body .randomcontent{ /*Do NOT remove! CSS to hide random contents in JS enabled browsers*/
+		display: none;
+		margin:auto;
+		width: 50%;
+		}
+
+		.center {
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 50%;
+	    padding-bottom: 30px;
+		}
+
+		.instructions {
+			border:1px dashed gray; 
+			background-color:rgba(132,137,136,1); 
+			padding: 18px; 
+			text-align:center;
+			font-family: sans-serif;
+		}
+
+		.learn {
+			font-family: sans-serif;
+			text-align:center; 
+			color: rgba(255,255,255,1);
+		}
